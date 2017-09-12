@@ -2,7 +2,7 @@
   "name": "project_4",
   "version": "1.0.0",
   "description": "Project Name: GoT KmK<br/> Author: Alex Li<br/> Developer @GA in DENVER<br/> <hr /> <h1>WELCOME!!!</h1><br/> [Link to the Project](#)",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
