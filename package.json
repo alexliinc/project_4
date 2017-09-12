@@ -1,0 +1,25 @@
+{
+  "name": "project_4",
+  "version": "1.0.0",
+  "description": "Project Name: GoT KmK<br/> Author: Alex Li<br/> Developer @GA in DENVER<br/> <hr /> <h1>WELCOME!!!</h1><br/> [Link to the Project](#)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexliinc/project_4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexliinc/project_4/issues"
+  },
+  "homepage": "https://github.com/alexliinc/project_4#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4"
+  }
+}
