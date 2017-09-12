@@ -19,6 +19,9 @@ app.use(bodyParser.json());
  * ROUTES *
  **********/
 
+// Using public folder to reference css and js and imgs
+app.use(express.static(__dirname + '/public'));
+
 /*
  * HTML Endpoints
  */
