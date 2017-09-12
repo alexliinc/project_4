@@ -1,4 +1,4 @@
-Project Name: GoT KmK<br/>
+Project Name: HP KmK<br/>
 Author: Alex Li<br/>
 Developer @GA in DENVER<br/>
 <hr />
@@ -6,7 +6,7 @@ Developer @GA in DENVER<br/>
 [Link to the Project](#)
 
 Project Idea:<br/>
-User will be given a random character from Game of Thrones and must decide whether to Kill Marry Or Kiss them<br/>
+User will be given a random character from Harry Potter and must decide whether to Kill Marry Or Kiss them<br/>
 
 TOOLS: HTML CSS JS EXPRESS MONGODB MONGOOSE AJAX JQUERY EJS<br/>
 Why these Tools:<br/>
