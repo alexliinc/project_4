@@ -27,17 +27,17 @@ function handleGetAllSuccess(data) {
 }
 
 function handleGetAllError(data) {
-  console.log('GET ALL stadiums error!!');
+  console.log('GET ALL characters error!!');
 }
 
 
-// this function takes a single stadium and renders it to the page
+// this function takes a single character and renders it to the page
 // ------------------------------------------------------------
 function renderCharacter(character) {
   var charactersHTML =
-    "        <!-- one stadium -->" +
+    "        <!-- one character -->" +
     "  <option value= '" + character._id + "'>" + character.name + "</option>" +
-    "        <!-- end one stadium -->";
+    "        <!-- end one character -->";
 
   // render to the page with jQuery
   $('#characters').append(charactersHTML);
