@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HP</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- VENDOR SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#user-menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">HP</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="user-menu">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- If user is signed in-->
+            <% if (currentUser) {%>
+              <li><a href="/players"> <span class="glyphicon glyphicon-star"></span> Your Players </a></li>
+              <li><a href="/userProfile"> <span class="glyphicon glyphicon-map-marker"></span> Mappy </a></li>
+              <li><a href="/logout"> <span class="glyphicon glyphicon-log-out"></span> Logout <%= currentUser.local.email %></a></li>
+            <% } else { %>
+              <li><a href="/signup"> <span class="glyphicon glyphicon-user"></span> Signup</a></li>
+              <li><a href="/login"> <span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <% } %>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <main class="container">

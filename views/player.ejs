@@ -1,0 +1,105 @@
+<% include ./partials/header.ejs %>
+
+
+<section id='player-form' class="container playerForm">
+  <h1>PLAYERS</h1>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+
+        <form class="form-horizontal">
+          <fieldset>
+
+            <!-- Form Name -->
+            <legend>Add New Player</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="playerName">Player Name</label>
+              <div class="col-md-4">
+                <input id="name" name="name" type="text" placeholder="" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+           <div class="form-group">
+             <label class="col-md-4 control-label" for="age">Age</label>
+             <div class="col-md-4">
+               <input id="age" name="age" type="text" placeholder="" class="form-control input-md">
+
+             </div>
+           </div>
+
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="singlebutton">Save Player</label>
+              <div class="col-md-4">
+                <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!--   END FORM SAMPLE -->
+
+ <section class="container">
+   <div class="row">
+     <div class="col-md-10 col-md-offset-1">
+       <h2>Your PLAYERS</h2>
+     </div>
+   </div>
+   <!-- players! -->
+   <div id='players'>
+
+   </div>
+ </section>
+
+ <!-- begin playerModal: this is not visible until you call .modal() on it -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="playerModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">update player</h4>
+        </div>
+        <div class="modal-body">
+          <fieldset class='form-horizontal'>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="name">Player Name</label>
+              <div class="col-md-4">
+                <input id="updateName" name="updateName" type="text" placeholder="" class="form-control input-md" readonly>
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="age">Update Player Age</label>
+              <div class="col-md-4">
+                <input id="updateAge" name="updateAge" type="text" placeholder="" class="form-control input-md">
+
+              </div>
+            </div>
+
+          </fieldset>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="saveplayer">Save changes</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+
+<% include ./partials/footer.ejs %>

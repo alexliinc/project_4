@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background: url('../images/hpwallp.jpg') no-repeat;
+  background-size: cover;
+  color: black;
+}
+
+#map {
+  width: 400px;
+  height: 400px;
+}
+
+#map_canvas {
+  width: 400px;
+  height: 400px;
+}
+
+div.background {
+  color: black;
+}
+
+div.headOfWelcome {
+  background-color: #e3f2fd;
+  border: 1px solid black;
+  opacity: 0.7;
+  text-align: center;
+}
+
+div.moveFromAnother {
+  background-color: #e3f2fd;
+  border: 1px solid black;
+  opacity: 0.7;
+  text-align: center;
+}
+
+section.playerForm {
+  background-color: #e3f2fd;
+  border: 1px solid black;
+  opacity: 0.8;
+}
+
+div.transbox {
+  background-color: #e3f2fd;
+  border: 1px solid black;
+  opacity: 0.9;
+}
+
+footer {
+  POINTER-EVENTS: NONE;
+}

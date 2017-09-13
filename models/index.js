@@ -4,9 +4,10 @@ var mongoose = require("mongoose");
 mongoose.connect(process.env.MONGODB_URI ||
   process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
-  "mongodb://localhost/hp_KMK");
+  "mongodb://localhost/hp");
 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/hp_KMK");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/hp");
 
-module.exports.Person = require("./Person.js");
+module.exports.User = require("./user.js");
+module.exports.Player = require("./player.js");
