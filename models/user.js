@@ -7,7 +7,7 @@ var User = mongoose.Schema({
     email: String,
     password: String,
   },
-  player: [Player.schema] //HAS TO BE LOWER CASE!!!!
+  players: [Player.schema] //HAS TO BE LOWER CASE!!!!
 });
 
 User.methods.hash = function(password) {

@@ -16,15 +16,19 @@ function showAllPlayers(request, response) {
 }
 
 // POST /addNewPlayer
-function addNewPlayer(request, response) {
-  //console.log(request.body);
-  db.Player.create({
-    name: request.body.name,
-    age: request.body.age
-  }, function(err, player) {
-    console.log(player);
-    response.json(player);
+function addNewPlayer(req, res) {
+  //Allows user to save beer to db
+  console.log("Backend save hit");
+  console.log(req.body);
+  var userPlayers = req.user.players;
+  var newPlayer = new db.Player({
+    name: req.body.name,
+    image: req.body.image,
+    action: req.body.action,
   });
+  userPlayers.push(newPlayer);
+  req.user.save();
+  res.json(newPlayer);
 }
 
 // PUT /updatePlayer
