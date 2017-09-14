@@ -29,3 +29,16 @@ Day 1:<br/>
 -created my repo <br/>
 -created [Trello](https://trello.com/b/rbAfTWhc/project-4) for everything<br/>
 -created wireframe using [Mockflow](https://wireframepro.mockflow.com/view/D4330f6f7f3a02a5856bdded065648a99)<br/>
+
+Day 2:<br/>
+(╯°□°）╯︵ ┻━┻<br/>
+
+
+Day 2.5:<br/>
+┻━┻ ︵ヽ(`Д´)ﾉ︵﻿ ┻━┻<br/>
+
+Day 2.75:<br/>
+[¬º-°]¬<br/>
+
+Day 3:<br/>
+乁( ◔ ౪◔)「      ┑(￣Д ￣)┍<br/>
