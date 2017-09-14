@@ -12,9 +12,21 @@ $(document).ready(function() {
   });
 
 
-
 });
 
+
+
+var i = 0;
+
+function buttonClick() {
+  if (i > 25) {
+    i = 0;
+  }
+  i++;
+  document.getElementById('inc').value = i;
+  console.log(i);
+  console.log($('select option:selected').val());
+}
 
 // Getting all characters
 // ------------------------------------------------------------
@@ -28,7 +40,7 @@ function handleGetAllSuccess(data) {
   console.log(selectPerson);
   const savePerson = function() {
     console.log("frontend hit with save");
-    var action = $('#action').val();
+    var action = $('select option:selected').val();
     $.ajax({
       type: "POST",
       url: "/players",
