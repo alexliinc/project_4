@@ -2,7 +2,11 @@ var db = require('../models');
 
 // GET /showAllPlayers
 function renderPlayer(request, response) {
-  response.render('player.ejs');
+  var userPlayers = request.user.players;
+  console.log(request.user.players);
+  response.render('player.ejs', {
+    userPlayers: userPlayers
+  });
   // db.Player.find({}, function(err, stadiums) {
   //   response.json(stadiums);
   // });

@@ -49,3 +49,9 @@ div.transbox {
 footer {
   POINTER-EVENTS: NONE;
 }
+
+.chart {
+  width: 500px;
+  height: 500px;
+  background: black;
+}
