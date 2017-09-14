@@ -57,6 +57,7 @@ router.route('/players')
 
 //deleting your Player
 router.route('/players/:id')
+  .get(authenticatedUser, playerController.removePlayer)
   .delete(authenticatedUser, playerController.removePlayer)
 
 //Getting all your Player

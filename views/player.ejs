@@ -13,11 +13,11 @@
   		<ul>
   			<li><b>Action: </b> <%= userPlayers[i].action %></li>
   		</ul>
-  		<br>
+  		<br/>
   		<img src="<%= userPlayers[i].image %>">
-  		<br>
-  		<a href="/myBeers/<%= userPlayers[i]._id %>" class="btn btn-warning">Delete</a>
-  		<br>
+  		<br/>
+      <a href="/players/<%= userPlayers[i]._id %>" class="btn btn-warning">Delete</a>
+  		<br/>
   	<% } %>
   </div>
 

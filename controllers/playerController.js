@@ -42,14 +42,29 @@ function updatePlayer(request, response) {
 
 // DELETE /removePlayer
 function removePlayer(request, response) {
-  console.log(request.params)
-  var playerId = request.params.id;
 
-  db.Player.findOneAndRemove({
-    _id: playerId
-  }, function(err, deletePlayer) {
-    response.json(deletePlayer);
-  });
+  console.log('Yo route is up');
+  var id = request.params.id;
+  console.log(id);
+  var userId = request.user._id;
+  console.log(userId);
+
+  db.User.findOneAndUpdate({
+      _id: userId
+    }, {
+      $pull: {
+        players: {
+          _id: id
+        }
+      }
+    }, {
+      upsert: true
+    },
+    function(err, user) {
+      if (err) response.send(err);
+      return response.redirect('../players');
+    }
+  );
 }
 
 
