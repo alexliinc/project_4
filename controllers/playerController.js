@@ -14,9 +14,7 @@ function renderPlayer(request, response) {
 
 // GET /showAllPlayers
 function showAllPlayers(request, response) {
-  db.Player.find({}, function(err, players) {
-    response.json(players);
-  });
+  res.send("hit");
 }
 
 // POST /addNewPlayer
@@ -37,7 +35,35 @@ function addNewPlayer(req, res) {
 
 // PUT /updatePlayer
 function updatePlayer(request, response) {
+  console.log(request.body);
+  console.log(request.params.id);
   response.send("yeah");
+  // db.User.find({
+  //   "players._id": request.body.id
+  // }, function(err, player) {
+  //   console.log(player);
+  // });
+  var userId = request.user._id;
+  console.log(userId);
+
+
+  db.User.findOneAndUpdate({
+      _id: userId
+    }, {
+      $set: {
+        players: {
+          _id: request.body.id,
+          action: request.body.action
+        }
+      }
+    }, {
+      upsert: true
+    },
+    function(err, user) {
+      if (err) request.send(err);
+      return request.redirect('../players');
+    }
+  );
 }
 
 // DELETE /removePlayer

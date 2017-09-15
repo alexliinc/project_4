@@ -1,4 +1,10 @@
 $(document).ready(function() {
+
+
+});
+
+
+$(document).ready(function() {
   console.log("edit js connected");
 
   function deletePerson() {
@@ -12,9 +18,24 @@ $(document).ready(function() {
     // });
   };
 
-  function msg() {
-    alert("Hello world!");
-  }
+
+
 
   //$('#delete').click(deletePerson);
 })
+
+function msg(item, action) {
+  console.log(item);
+  console.log(action);
+  $.ajax({
+    method: "PUT",
+    url: "/players/" + item,
+    data: {
+      id: item,
+      action: action
+    },
+    success: function(result) {
+      console.log("it worked");
+    }
+  });
+}

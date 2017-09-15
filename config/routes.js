@@ -52,13 +52,14 @@ router.route('/api/stadiums')
 router.route('/players')
   .get(authenticatedUser, playerController.renderPlayer)
   .post(authenticatedUser, playerController.addNewPlayer)
-  .put(authenticatedUser, playerController.updatePlayer)
+
 
 
 //deleting your Player
 router.route('/players/:id')
   .get(authenticatedUser, playerController.removePlayer)
   .delete(authenticatedUser, playerController.removePlayer)
+  .put(authenticatedUser, playerController.updatePlayer)
 
 //Getting all your Player
 router.route('/players/showAllPlayers')

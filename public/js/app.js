@@ -28,15 +28,22 @@ function buttonClick() {
   console.log($('select option:selected').val());
 }
 
+
+
 // Getting all characters
 // ------------------------------------------------------------
 function handleGetAllSuccess(data) {
+  var randomNum = Math.floor(Math.random() * (25 - 1 + 1)) + 1;
+  if (i > 25) {
+    i = 0;
+  }
+  i++;
   // data.forEach(function(value) {
   //   renderCharacter(value);
   // });
   //console.log(data[0]);
-  renderCharacter(data[0])
-  selectPerson = data[0];
+  renderCharacter(data[randomNum])
+  selectPerson = data[randomNum];
   console.log(selectPerson);
   const savePerson = function() {
     console.log("frontend hit with save");
@@ -51,6 +58,7 @@ function handleGetAllSuccess(data) {
         action: action,
       }
     });
+    document.location.reload();
   };
 
   // $('button').on('click', saveBeer);

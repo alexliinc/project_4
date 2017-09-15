@@ -18,7 +18,22 @@
   		<br/>
       <a href="/players/<%= userPlayers[i]._id %>" class="btn btn-warning">Delete</a>
   		<br/>
+      <!--<select id='<%= userPlayers[i]._id %>'>
+        <option value="KILL">KILL</option>
+        <option value="MARRY">MARRY</option>
+        <option value="KISS">KISS</option>
+      </select>
+      <button onclick="Edit('<%= userPlayers[i]._id %>')">Edit</button>-->
   	<% } %>
   </div>
+<script>
+
+  function Edit(item) {
+
+    var action =$( "select#"+item ).val(); //= $('select#id option:selected"').val();
+    msg(item, action);
+  }
+
+</script>
 
 <% include ./partials/footer.ejs %>
